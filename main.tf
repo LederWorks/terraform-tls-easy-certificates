@@ -3,9 +3,6 @@ resource "tls_private_key" "ca_key" {
   algorithm = "RSA"
   rsa_bits = 4096
 }
-output "certificate_authority_private_key" {
-  value = tls_private_key.ca_key.private_key_pem
-}
 
 # Self Signed Cert for CA
 resource "tls_self_signed_cert" "ca_cert" {
@@ -26,9 +23,6 @@ resource "tls_self_signed_cert" "ca_cert" {
     organization        = lookup(var.certificate_authority, "organization", null)
     organizational_unit = lookup(var.certificate_authority, "unit", null)
   }
-}
-output "certificate_authority_certificate" {
-  value = tls_self_signed_cert.ca_cert
 }
 
 #Private Key for Server Certificates
