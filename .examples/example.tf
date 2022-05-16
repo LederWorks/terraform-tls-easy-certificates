@@ -46,3 +46,17 @@ module "easy-certificates" {
 
 }
 
+output "certificate_authority_private_key" {
+  value = module.easy-certificates.certificate_authority_private_key
+  sensitive = true
+}
+
+output "certificate_authority_certificate" {
+  value = module.easy-certificates.certificate_authority_certificate
+  sensitive = true
+}
+
+output "server_certificates" {
+  value = module.easy-certificates.server_certificates
+  sensitive = true
+}

@@ -70,6 +70,20 @@ module "easy-certificates" {
 
 }
 
+output "certificate_authority_private_key" {
+  value = module.easy-certificates.certificate_authority_private_key
+  sensitive = true
+}
+
+output "certificate_authority_certificate" {
+  value = module.easy-certificates.certificate_authority_certificate
+  sensitive = true
+}
+
+output "server_certificates" {
+  value = module.easy-certificates.server_certificates
+  sensitive = true
+}
 ```
 
 ## Resources
@@ -95,6 +109,7 @@ module "easy-certificates" {
 |------|-------------|
 | <a name="output_certificate_authority_certificate"></a> [certificate\_authority\_certificate](#output\_certificate\_authority\_certificate) | n/a |
 | <a name="output_certificate_authority_private_key"></a> [certificate\_authority\_private\_key](#output\_certificate\_authority\_private\_key) | n/a |
+| <a name="output_server_certificates"></a> [server\_certificates](#output\_server\_certificates) | n/a |
 
 ## Contributing
 
