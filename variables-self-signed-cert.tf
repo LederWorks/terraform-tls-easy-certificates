@@ -1,9 +1,14 @@
 variable "certificate_authority" {
-  type = any
-  default = {}
-  description = "A map with the certicate subject configuration."
+  type = object({
+    common_name  = string
+    country      = string
+    locality     = string
+    organization = string
+    unit         = string
+    validity     = number
+  })
 }
 
 variable "server_certificates" {
-  type = any
+  type = map(any)
 }

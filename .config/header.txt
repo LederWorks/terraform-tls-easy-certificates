@@ -1,6 +1,6 @@
 <!-- markdownlint-disable-file MD033 MD012 -->
 # terraform-tls-easy-self-signed-cert
-Easy TLS Self Signed Cert Module
+Easy TLS Certificates
 
 # Authors
   - [Bence Bánó](mailto:bence.bano@lederworks.com)
